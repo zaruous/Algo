@@ -19,7 +19,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-//			int Q = Integer.parseInt(br.readLine());
+			int Q = Integer.parseInt(br.readLine());
 			int[] arr = new int[1501];
 
 			int idx = 1;
