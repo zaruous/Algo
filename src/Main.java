@@ -1,81 +1,78 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.StringTokenizer;
 
 public class Main {
 	// 항상 PS에서 꼭 넣고 시작하는 코드
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringTokenizer st; // <- 특정 기준을 통해 문자열을 자르는 역할
 
-	static int adj[][];
-	static int N;
+	static int N, M;
 
-	static boolean visite[];
-	static int max = Integer.MIN_VALUE;
-	static int min = Integer.MAX_VALUE;
+	static class Node implements Comparable<Node> {
+		int x1, x2, width;
+		int anser;
 
-	static int maxv(int now, int end, int cost) {
-		if (now == end) {
-			return cost;
+		public Node(int x1, int width) {
+			super();
+			this.x1 = x1;
+			this.x2 = x1 + width;
+			this.width = width;
 		}
 
-		int max = Integer.MIN_VALUE;
-		for (int to = 1; to < N; to++) {
+		@Override
+		public int compareTo(Main.Node o) {
 
-			if (visite[to])
-				continue;
-			if (adj[now][to] == 0) // now->to로 갈 수 없으면 무시
-				continue;
-			visite[to] = true;
-			int ret = maxv(to, end, adj[now][to]);
-			max = Math.max(ret, max);
-			visite[to] = false;
-			// System.out.println(now + " -> " + to);
-		}
-		return max + cost;
-	}
-
-	static int minv(int now, int end, int cost) {
-		if (now == end) {
-			return cost;
+			if (this.x1 == o.x1)
+				return Integer.compare(this.x2, o.x2);
+			return Integer.compare(this.x1, o.x1);
 		}
 
-		int min = Integer.MAX_VALUE;
-		for (int to = 1; to < N; to++) {
-
-			if (visite[to])
-				continue;
-			if (adj[now][to] == 0) // now->to로 갈 수 없으면 무시
-				continue;
-			visite[to] = true;
-			int ret = minv(to, end, adj[now][to]);
-			min = Math.min(ret, min);
-			visite[to] = false;
-			// System.out.println(now + " -> " + to);
-		}
-		return min + cost;
 	}
 
 	public static void main(String[] args) throws IOException {
 
-		N = Integer.parseInt(br.readLine());
+		st = new StringTokenizer(br.readLine());
+		N = Integer.parseInt(st.nextToken());
+		M = Integer.parseInt(st.nextToken());
 
-		adj = new int[1 + N][1 + N];
+		// 프린트
+
+		PriorityQueue<Main.Node> priorityQueue = new PriorityQueue<Node>();
+		ArrayList<Main.Node> questions = new ArrayList<Main.Node>();
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
-			for (int j = 0; j < N; j++) {
-				adj[i][j] = Integer.parseInt(st.nextToken());
-			}
+			int req = Integer.parseInt(st.nextToken());
+			int cost = Integer.parseInt(st.nextToken());
+			Node e = new Node(req, cost);
+			priorityQueue.add(e);
+			questions.add(e);
 		}
-		st = new StringTokenizer(br.readLine());
-		int s = Integer.parseInt(st.nextToken());
-		int t = Integer.parseInt(st.nextToken());
 
-		visite = new boolean[1 + N];
-		int ret = minv(s, t, 0);
-		System.out.println(ret);
-		visite = new boolean[1 + N];
-		ret = maxv(s, t, 0);
-		System.out.println(ret);
+		int[] marker = new int[M];
+		int min = Integer.MAX_VALUE;
+		int idx = 0;
+		while (!priorityQueue.isEmpty()) {
+			Main.Node poll = priorityQueue.poll();
+			for (int i = 0; i < marker.length; i++) {
+				if (marker[i] < min) {
+					marker[i] = min ;
+					idx = i;
+				}
+			}
+			// marker[0] = poll.x2;
+
+			poll.anser = (idx + 1);
+		}
+		questions.forEach(n -> {
+			// System.out.println(n.x1 + " " + n.width + " " + n.anser);
+			System.out.println(n.anser);
+			// System.out.println(n.anser);
+		});
 
 	}
+
 }

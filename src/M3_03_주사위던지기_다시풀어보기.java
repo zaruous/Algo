@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  * @author KYJ (kyjun.kim@miracom.co.kr)
  *
  */
-public class M3_03_다시풀어보기 {
+public class M3_03_주사위던지기_다시풀어보기 {
 
 	public static void main(String[] args) {
 

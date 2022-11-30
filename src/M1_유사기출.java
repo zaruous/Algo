@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /********************************
  *	프로젝트 : Algo
@@ -17,6 +18,7 @@ public class M1_유사기출 {
 
 	static int[] arr;
 	static int M;
+	static int N;
 
 	public static void main(String[] args) {
 
@@ -26,18 +28,27 @@ public class M1_유사기출 {
 			for (int tcase = 0; tcase < T; tcase++) {
 				// matchVal = 0;
 				String[] nmk = br.readLine().split(" ");
-				int n = Integer.parseInt(nmk[0]);
+				N = Integer.parseInt(nmk[0]);
 				M = Integer.parseInt(nmk[1]); // 눈금
 				int k = Integer.parseInt(nmk[2]); // 가리키는값
 
-				String[] dials = br.readLine().split(" ");
-				arr = new int[dials.length];
-				for (int i = 0; i < dials.length; i++) {
-					arr[i] = Integer.parseInt(dials[i]);
-				}
-				int recursive = recursive(0, 0, k, "");
+				StringTokenizer st = new StringTokenizer(br.readLine());
+				arr = new int[N];
+				// visite = new boolean[N];
+				for (int i = 0; i < N; i++) {
 
-				System.out.println(recursive);
+					// 큰 수를 작은값으로 전처리
+					int v = Integer.parseInt(st.nextToken());
+					if (v >= M)
+						v = v % M;
+					else if (v < 0)
+						v = (M + (v % M));
+					arr[i] = v;
+				}
+
+				int recursive = recursive(0, 0, k);
+
+				System.out.println("#" + (tcase + 1) + " " + recursive);
 			}
 
 		} catch (IOException e) {
@@ -46,27 +57,24 @@ public class M1_유사기출 {
 
 	}
 
-	private static int recursive(int currentPos, int step, int goals, String append) {
-
+	private static int recursive(int currentPos, int step, int goals) {
 		if (step == 4) {
-			if (currentPos == goals) {
-				System.out.println(append);
+			if (currentPos == goals)
 				return 1;
-			}
-			return 0;
+			else
+				return 0;
 		}
 
 		int ret = 0;
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < N; i++) {
+
 			// 다음에 이동되는값 = 현재 값 + 다음에 이동할값.
 			int nextPos = currentPos + arr[i];
 
-			if (nextPos >= (M))
+			if (nextPos >= M)
 				nextPos = nextPos % M;
-			else if (nextPos < 0)
-				nextPos = M + nextPos;
 
-			ret += recursive(nextPos, step + 1, goals, append + " " + arr[i]);
+			ret += recursive(nextPos, step + 1, goals);
 		}
 		return ret;
 
