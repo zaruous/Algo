@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class M3_M9 {
 	// 항상 PS에서 꼭 넣고 시작하는 코드
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringTokenizer st; // <- 특정 기준을 통해 문자열을 자르는 역할
