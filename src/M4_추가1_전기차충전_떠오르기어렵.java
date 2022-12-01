@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class M4_추가1_전기차충전_떠오르기어렵 {
 
 	// 항상 PS에서 꼭 넣고 시작하는 코드
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

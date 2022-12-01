@@ -21,11 +21,11 @@ public class M2_03_개구리점프_이해하기어렵 {
 	static class Node implements Comparable<Node> {
 		int x1, x2, y;
 
-		public Node(int x1, int x2, int y) {
+		public Node(int x1, int x2, int width) {
 			super();
 			this.x1 = x1;
 			this.x2 = x2;
-			this.y = y;
+			this.y = width;
 		}
 
 		@Override
@@ -54,8 +54,8 @@ public class M2_03_개구리점프_이해하기어렵 {
 			int cnt = 0;
 			for (int i = 0; i < nodes.length; i++) {
 
-				if (p <= nodes[i].s) {
-					p = nodes[i].e;
+				if (p <= nodes[i].x2) {
+					p = nodes[i].x1;
 					cnt++;
 				}
 
