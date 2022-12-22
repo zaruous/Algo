@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class _1504 {
+public class _1504_특정한_최단_경로 {
 
 	private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	private static int T;
@@ -30,7 +30,7 @@ public class _1504 {
 		}
 
 		@Override
-		public int compareTo(_1504.Node o) {
+		public int compareTo(_1504_특정한_최단_경로.Node o) {
 			return Integer.compare(value, o.value);
 		}
 
