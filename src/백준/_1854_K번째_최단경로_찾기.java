@@ -82,7 +82,8 @@ public class _1854_K번째_최단경로_찾기 {
 				if (revq[next.n].size() < K) {
 					revq[next.n].add(nw);
 					q.add(new Node(next.n, nw));
-				} else if (revq[next.n].peek() > nw) {
+				} 
+				else if (revq[next.n].peek() > nw) {
 					revq[next.n].poll();
 					revq[next.n].add(nw);
 					q.add(new Node(next.n, nw));
