@@ -1,19 +1,23 @@
+package _2차;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-class Node {
-	int node;
-	int cost;
 
-	Node(int node, int cost) {
-		this.node = node;
-		this.cost = cost;
-	}
-}
 
 public class 보석가계 {
+	
+	static class Node {
+		int node;
+		int cost;
+
+		Node(int node, int cost) {
+			this.node = node;
+			this.cost = cost;
+		}
+	}
+	
 	static StringTokenizer st;
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static int N, M, Q;

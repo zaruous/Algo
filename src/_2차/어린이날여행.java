@@ -1,3 +1,4 @@
+package _2차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
