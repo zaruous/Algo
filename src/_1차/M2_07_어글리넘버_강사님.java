@@ -26,7 +26,7 @@ public class M2_07_어글리넘버_강사님 {
 			last = now;
 			cnt++;
 		}
-		print(ugly);
+//		print(ugly);
 		int n = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
