@@ -1,3 +1,4 @@
+package 세그먼트트리;
 import java.io.*;
 import java.util.*;
 

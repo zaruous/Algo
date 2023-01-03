@@ -1,7 +1,8 @@
+package 세그먼트트리;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class M1_추가1_세그먼트트리 {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	static StringTokenizer st;
 	static long arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }; // 실제 배열 값
