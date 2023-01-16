@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 /**
  * 
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M2_추가_5_별헤는밤 {

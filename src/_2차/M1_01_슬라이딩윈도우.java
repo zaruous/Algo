@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 슬라이딩 윈도우
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M1_01_슬라이딩윈도우 {

@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 /**
  * 다시 풀어봐야함. 생각의 틀. DP같은 문제
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M1_04_구간의합_접근이어렵 {

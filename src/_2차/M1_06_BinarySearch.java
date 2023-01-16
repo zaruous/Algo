@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /**
  * 다시 풀어봐야함. 생각의 틀
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M1_06_BinarySearch {
@@ -47,7 +47,7 @@ public class M1_06_BinarySearch {
 	}
 
 	/**
-	 * @작성자 : KYJ (callakrsos@naver.com)
+	 * @작성자 : KYJ (zaruous@naver.com)
 	 * @작성일 : 2022. 12. 12.
 	 * @param srch
 	 * @param s

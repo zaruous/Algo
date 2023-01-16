@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /**
  * 
  * 정렬된 트리를 유지해야함. 세그먼트 트리
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class _1209_세그먼트_트리활용문제 {

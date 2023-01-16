@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
 /**
  * 슬라이딩 윈도우
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class Main2 {

@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 /**
  * 
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class Main4 {

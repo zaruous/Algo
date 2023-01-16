@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /**
  * 
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M2_01_트리BFS {

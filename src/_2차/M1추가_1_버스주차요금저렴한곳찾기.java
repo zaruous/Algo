@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * 슬라이딩 윈도우
  * 
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class M1추가_1_버스주차요금저렴한곳찾기 {
