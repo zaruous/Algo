@@ -14,14 +14,6 @@ package _2차;
 import java.io.*; 
 import java.util.*; 
 
-class Node  {
-	int row, col; 
-	Node(int row, int col) 
-	{ 
-		this.row = row;
-		this.col = col; 
-	}
-}
 
 public class FireFighter {
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

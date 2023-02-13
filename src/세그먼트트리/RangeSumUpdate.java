@@ -83,13 +83,13 @@ public class RangeSumUpdate {
 		st = new StringTokenizer(br.readLine());
 		int N = Integer.parseInt(st.nextToken());
 		int Q = Integer.parseInt(st.nextToken());
-		arr = new int[N];
-		tree = new long[N * 4];
+		arr = new int[N+1];
+		tree = new long[(N+1) * 4];
 		st = new StringTokenizer(br.readLine());
-		for (int i = 0; i < N; i++)
+		for (int i = 1; i <= N; i++)
 			arr[i] = Integer.parseInt(st.nextToken());
 
-		init(1, 0, N - 1);
+		init(1, 1 , N );
 		for (int i = 0; i < Q; i++) {
 			st = new StringTokenizer(br.readLine());
 			int oper = Integer.parseInt(st.nextToken());
@@ -98,9 +98,9 @@ public class RangeSumUpdate {
 
 			if (oper == 1)
 				// 수정 작업
-				update(1, 0, N - 1, a - 1, b);
+				update(1, 1, N , a, b);
 			else
-				System.out.println(query(1, 0, N - 1, a - 1, b - 1));
+				System.out.println(query(1, 1, N , a , b ));
 
 		}
 

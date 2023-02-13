@@ -11,14 +11,14 @@ import java.util.StringTokenizer;
  *	프로젝트 : Algo
  *	패키지   : 
  *	작성일   : 2022. 11. 28.
- *	작성자   : KYJ (kyjun.kim@miracom.co.kr)
+ *	작성자   : KYJ (callakrsos@naver.com)
  *******************************/
 
 /**
  * 
  * 중앙의 값을 우선순위큐로 찾을 수 있다는게 색달랐던것같음.
  * 
- * @author KYJ (kyjun.kim@miracom.co.kr)
+ * @author KYJ (callakrsos@naver.com)
  *
  */
 public class M2_06_정중앙대학교_신선함 {

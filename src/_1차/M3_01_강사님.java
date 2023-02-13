@@ -9,7 +9,7 @@ import java.util.*;
 0 5
  
 
- * @author KYJ (kyjun.kim@miracom.co.kr)
+ * @author KYJ (callakrsos@naver.com)
  *
  */
 public class M3_01_강사님 {

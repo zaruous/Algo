@@ -10,11 +10,11 @@ import java.util.PriorityQueue;
  *	프로젝트 : Algo
  *	패키지   : 
  *	작성일   : 2022. 11. 28.
- *	작성자   : KYJ (kyjun.kim@miracom.co.kr)
+ *	작성자   : KYJ (callakrsos@naver.com)
  *******************************/
 
 /**
- * @author KYJ (kyjun.kim@miracom.co.kr)
+ * @author KYJ (callakrsos@naver.com)
  *
  */
 public class M2_04 {
