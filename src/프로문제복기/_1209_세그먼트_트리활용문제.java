@@ -32,6 +32,9 @@ public class _1209_세그먼트_트리활용문제 {
 	static int query(int node, int start, int end, int left, int right, int rank) {
 		if (start > right || left > end)
 			return 0;
+		
+		
+		
 		if (start == end) {
 			sameRank = rank;
 			return start;

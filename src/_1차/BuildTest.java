@@ -7,11 +7,11 @@ import java.util.Scanner;
  *	프로젝트 : Algo
  *	패키지   : 
  *	작성일   : 2022. 11. 28.
- *	작성자   : KYJ (callakrsos@naver.com)
+ *	작성자   : KYJ (zaruous@naver.com)
  *******************************/
 
 /**
- * @author KYJ (callakrsos@naver.com)
+ * @author KYJ (zaruous@naver.com)
  *
  */
 public class BuildTest {
